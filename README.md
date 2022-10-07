@@ -4,6 +4,23 @@
 ## 1-Update source list 
 source : https://www.itzgeek.com/how-tos/linux/debian/setup-debian-11-official-repository-in-sources-list-etc-apt-sources-list.html
 
+```sh
+deb http://deb.debian.org/debian bullseye main contrib non-free
+deb-src http://deb.debian.org/debian bullseye main contrib non-free
+
+deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
+
+deb http://deb.debian.org/debian bullseye-backports main contrib non-free
+deb-src http://deb.debian.org/debian bullseye-backports main contrib non-free
+
+deb http://security.debian.org/debian-security/ bullseye-security main contrib non-free
+deb-src http://security.debian.org/debian-security/ bullseye-security main contrib non-free
+deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+# deb-src [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+```
+
+
 ## 2- Install wifi
 ```sh
 $ apt update && apt install firmware-iwlwifi
